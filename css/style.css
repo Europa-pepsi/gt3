@@ -1,13 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #111315;
@@ -21,19 +11,13 @@ body {
     align-items: center;
     padding: 0 45px;
     gap: 55px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+
 }
 
 .logo {
     font-size: 38px;
     font-weight: 900;
     font-style: italic;
-}
-
-.logo span {
-    color: #e5252a;
 }
 
 .nav {
@@ -53,10 +37,10 @@ body {
 }
 
 .menu-button {
-    display: none;
-    margin-left: auto;
-    background: none;
-    border: 0;
+line-height: 1.2;                  
+    text-transform: uppercase;
+    font-weight: 700;                  
+    letter-spacing: 1.5px; 
     color: white;
     font-size: 25px;
 }
@@ -64,9 +48,8 @@ body {
 .hero {
     min-height: 680px;
     background:
-        linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.25)),
-        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85")
-        center / cover;
+        linear-gradient(90deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .25)),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85") center / cover;
     display: flex;
     align-items: center;
     padding: 70px 9%;
@@ -207,9 +190,8 @@ h2 {
     display: flex;
     align-items: center;
     background:
-        linear-gradient(90deg, rgba(0,0,0,.8), rgba(0,0,0,.2)),
-        url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1800&q=85")
-        center / cover;
+        linear-gradient(90deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .2)),
+        url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1800&q=85") center / cover;
 }
 
 .track-text {
@@ -230,46 +212,52 @@ footer {
     color: #888;
 }
 
-@media (max-width: 800px) {
-    .header {
-        padding: 0 25px;
-    }
+.quiz {
+    margin: 40px auto;
+    padding: 25px;
+    background: #1b1d20;
+    border-radius: 8px;
+    text-align: center;
+    /* центрує текст і кнопки */
+    max-width: 500px;
+    /* щоб блок не був надто широким */
+}
 
-    .nav {
-        display: none;
-        position: absolute;
-        top: 90px;
-        left: 0;
-        width: 100%;
-        background: #1a1c1f;
-        padding: 25px;
-        flex-direction: column;
-    }
+.quiz p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
 
-    .nav.show {
-        display: flex;
-    }
+.quiz-option {
+    display: inline-block;
+    /* кнопки стають поруч, а не блоками */
+    margin: 8px;
+    padding: 12px 20px;
+    background: #e5252a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
 
-    .menu-button {
-        display: block;
-    }
+.quiz-option:hover {
+    background: white;
+    color: #111315;
+    transform: scale(1.05);
+}
 
-    .cards,
-    .academy {
-        grid-template-columns: 1fr;
-    }
 
-    h2 {
-        font-size: 38px;
-    }
+.quiz-option:hover {
+    background: white;
+    color: #111315;
+}
 
-    .hero {
-        min-height: 600px;
-        padding: 50px 7%;
-    }
+.button {
+    transition: all 0.3s ease;
+}
 
-    footer {
-        flex-direction: column;
-        gap: 15px;
-    }
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
