@@ -54,9 +54,9 @@ function showQuestion(index) {
     btn.addEventListener("click", () => {
       if (opt == q.answer) {
         score++;
-        alert("✅ Правильно!");
+        alert(" Правильно!");
       } else {
-        alert("❌ Неправильно!");
+        alert(" Неправильно!");
       }
       if (index + 1 < quizQuestions.length) {
         showQuestion(index + 1);
